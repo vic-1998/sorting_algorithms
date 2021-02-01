@@ -20,7 +20,7 @@ int partition(int *array, size_t size, int lo, int hi)
 	{
 		if (array[j] < pivot)
 		{
-			if (j != i)
+			if (j > i)
 			{
 				temp = array[i];
 				array[i] = array[j];
@@ -30,7 +30,7 @@ int partition(int *array, size_t size, int lo, int hi)
 			i++;
 		}
 	}
-	if (i != hi)
+	if (array[i] > pivot)
 	{
 		temp = array[i];
 		array[i] = array[hi];
