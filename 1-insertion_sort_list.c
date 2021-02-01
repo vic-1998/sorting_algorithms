@@ -10,15 +10,15 @@ void insertion_sort_list(listint_t **list)
 	listint_t *temp, *tpre, *tnext, *t;
 	int i, j, size = 0, tmp;
 
+	if (!list || !*list)
+		return;
 	temp = *list;
 	while (temp)
 	{
 		temp = temp->next;
 		size++;
 	}
-
 	temp = (*list)->next;
-
 	for (i = 1; i < size; i++)
 	{
 		tmp = temp->n;
