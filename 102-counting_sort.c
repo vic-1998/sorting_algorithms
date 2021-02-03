@@ -29,7 +29,7 @@ void counting_sort(int *array, size_t size)
 		count[array[i]] += 1;
 	for (i = 1; i <= max; i++)
 		count[i] += count[i - 1];
-	print_array(count, max);
+	print_array(count, max + 1);
 	for (i = 0; i < n; i++)
 		out[i] = 0;
 	for (i = n - 1; i > -1; i--)
