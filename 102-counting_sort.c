@@ -10,8 +10,10 @@ void counting_sort(int *array, size_t size)
 {
 	int *count, max = 0, *out, n, i, temp;
 
+	if (!array || size < 2)
+		return;
 	out = malloc(sizeof(int) * (size));
-	if (!out || !array || size < 1)
+	if (!out)
 		return;
 	n = size;
 	for (i = 0; i < n; i++)
