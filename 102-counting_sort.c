@@ -13,16 +13,16 @@ void counting_sort(int *array, size_t size)
 	out = malloc(sizeof(int) * (size));
 	if (!out || !array || size < 2)
 		return;
+	n = size;
+	for (i = 0; i < n; i++)
+		if (array[i] > max)
+			max = array[i];
 	count = malloc(sizeof(int) * (max + 1));
 	if (!count)
 	{
 		free(out);
 		return;
 	}
-	n = size;
-	for (i = 0; i < n; i++)
-		if (array[i] > max)
-			max = array[i];
 	for (i = 0; i <= max; i++)
 		count[i] = 0;
 	for (i = 0; i <= n - 1; i++)
