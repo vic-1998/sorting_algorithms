@@ -1,5 +1,33 @@
 #include "sort.h"
 
+void merge(size_t start, size_t middle, size_t end, int *dest, int *source)
+{
+	size_t i, j, k;
+
+	printf("Merging...\n");
+	printf("[left]: ");
+	print_array(source + start, middle - start);
+	printf("[right]: ");
+	print_array(source + middle, end - middle);
+	i = start;
+	j = middle;
+	for (k = start; k < end; k++)
+	{
+		if (i < middle && (j >= end || source[i] <= source[j]))
+		{
+			dest[k] = source[i];
+			i++;
+		}
+		else
+		{
+			dest[k] = source[j];
+			j++;
+		}
+	}
+	printf("[Done]: ");
+	print_array(dest + start, end - start);
+}
+
 /**
  * merge_sort_h - recursively splits the array and merges the sorted arrays
  * @start: starting index (inclusive)
