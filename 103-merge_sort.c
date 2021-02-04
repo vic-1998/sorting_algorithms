@@ -1,17 +1,16 @@
 #include "sort.h"
 
-
 void merge_sort_h(size_t start, size_t end, int *array, int *copy)
 {
-        size_t middle;
-        if (end - start < 2)
-                return;
-        middle = (start + end) / 2;
-merge_sort_h(start, middle, array, copy);
-        merge_sort_h(middle, end, array, copy);
-        merge(start, middle, end, array, copy);
-        for (middle = start; middle < end; middle++)
-        copy[middle] = array[middle];
+	size_t middle;
+	if (end - start < 2)
+		return;
+	middle = (start + end) / 2;
+	merge_sort_h(start, middle, array, copy);
+	merge_sort_h(middle, end, array, copy);
+	merge(start, middle, end, array, copy);
+	for (middle = start; middle < end; middle++)
+		copy[middle] = array[middle];
 }
 
 /**
