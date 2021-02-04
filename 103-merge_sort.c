@@ -1,5 +1,14 @@
 #include "sort.h"
 
+/**
+ * merge - sorts and merges the sub arrays in source
+ * @start: starting index
+ * @middle: end index
+ * @end: end index
+ * @dest: destination for data
+ * @source: source of data
+ * Return: void
+ */
 void merge(size_t start, size_t middle, size_t end, int *dest, int *source)
 {
 	size_t i, j, k;
