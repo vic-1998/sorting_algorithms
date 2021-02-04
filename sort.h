@@ -28,5 +28,6 @@ void insertion_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void merge_sort_h(size_t start, size_t end, int *array, int *copy);
+void merge(size_t start, size_t middle, size_t end, int *dest, int *source);
 
 #endif /* SORT_H */
