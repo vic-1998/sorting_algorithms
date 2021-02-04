@@ -1,8 +1,17 @@
 #include "sort.h"
 
+/**
+ * merge_sort_h - recursively splits the array and merges the sorted arrays
+ * @start: starting index (inclusive)
+ * @end: end index
+ * @array: the array to sort
+ * @copy: a copy of the array
+ * Return: void
+ */
 void merge_sort_h(size_t start, size_t end, int *array, int *copy)
 {
 	size_t middle;
+
 	if (end - start < 2)
 		return;
 	middle = (start + end) / 2;
