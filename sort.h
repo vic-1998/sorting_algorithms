@@ -27,5 +27,6 @@ void quick_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
+void merge_sort_h(size_t start, size_t end, int *array, int *copy);
 
 #endif /* SORT_H */
